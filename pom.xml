@@ -285,7 +285,10 @@
                         <artifactId>maven-surefire-plugin</artifactId>
                         <version>2.4.3</version>
                         <configuration>
-                            <skip>false</skip>
+                            <environmentVariables>
+		                    <JBOSS_HOME>${env.JBOSS_HOME}</JBOSS_HOME>
+		                </environmentVariables>
+		            <skip>false</skip>
                         </configuration>
                     </plugin>
                 </plugins>
